@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+
 import LogoSite from '@/public/logo-lion.png';
 
 const Logo = () => {
@@ -11,7 +12,9 @@ const Logo = () => {
       onClick={() => router.push('/')}
       alt="logo"
       src={LogoSite}
-      className="cursor-pointer rounded-full"
+      className="
+      cursor-pointer 
+      rounded-full"
       priority
       style={{
         height: '40px',

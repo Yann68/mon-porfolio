@@ -2,11 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 import Logo from './Logo';
-import ToggleDarkMode from './ToggleDarkMode';
 import IconBar from './IconBar';
-import { useState } from 'react';
 import { FaXmark } from 'react-icons/fa6';
+
+import ToggleDarkMode from './ToggleDarkMode';
+
+import { useState } from 'react';
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -26,23 +29,53 @@ const Sidebar = () => {
         } `}
       />
       <div
-        className={`sm:hidden transition duration-500 ease-in-out w-52 pb-3 h-full absolute  dark:bg-black bg-slate-950 border-r border-white border-e flex flex-col items-center pt-3 z-30 ${
-          open ? 'translate-x-0' : '-translate-x-[210px]'
-        }`}>
+        className={`
+        sm:hidden 
+        transition 
+        duration-500 
+        ease-in-out 
+        w-52 
+        pb-3 
+        h-full 
+        absolute  
+        dark:bg-black 
+        bg-slate-950 
+        border-r 
+        border-white 
+        border-e 
+        flex 
+        flex-col 
+        items-center 
+        pt-3 
+        z-30 ${open ? 'translate-x-0' : '-translate-x-[210px]'}`}>
         <Logo />
         <div
           onClick={handleOpen}
-          className="absolute right-4 top-3 text-xl cursor-pointer">
+          className="
+          absolute
+          right-4
+          top-3
+          text-xl
+          cursor-pointer">
           <FaXmark />
         </div>
         <nav className="h-full">
-          <ul className="flex text-md font-semibold flex-col pt-6 space-y-5">
+          <ul
+            className="
+          flex
+          text-md
+          font-semibold
+          flex-col
+          pt-6
+          space-y-5">
             <li>
               <Link
                 onClick={handleOpen}
-                className={` transition duration-200 ease-in-out hover:opacity-50 ${
-                  pathname === '/' ? 'text-white' : ''
-                }`}
+                className={` 
+                transition 
+                duration-200 
+                ease-in-out 
+                hover:opacity-50 ${pathname === '/' ? 'text-white' : ''}`}
                 href={'/'}>
                 Accueil
               </Link>
@@ -50,9 +83,11 @@ const Sidebar = () => {
             <li>
               <Link
                 onClick={() => setOpen(false)}
-                className={` transition duration-200 ease-in-out hover:opacity-50 ${
-                  pathname === '/about' ? 'text-white' : ''
-                }`}
+                className={` 
+                transition 
+                duration-200 
+                ease-in-out 
+                hover:opacity-50 ${pathname === '/about' ? 'text-white' : ''}`}
                 href={'/about'}>
                 A propos
               </Link>
@@ -60,7 +95,11 @@ const Sidebar = () => {
             <li>
               <Link
                 onClick={() => setOpen(false)}
-                className={` transition duration-200 ease-in-out hover:opacity-50 ${
+                className={` 
+                transition 
+                duration-200 
+                ease-in-out 
+                hover:opacity-50 ${
                   pathname === '/contact' ? 'text-white' : ''
                 }`}
                 href={'/contact'}>

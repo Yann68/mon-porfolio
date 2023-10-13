@@ -24,7 +24,7 @@ export default function RootLayout({
         suppressHydrationWarning>
         <head />
         <body
-          className={`${font.className}, text-gray-500 dark:bg-dark-bg dark:text-slate-400`}>
+          className={`${font.className}, text-gray-500 bg-[#ECECEC] dark:bg-dark-bg dark:text-slate-400`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

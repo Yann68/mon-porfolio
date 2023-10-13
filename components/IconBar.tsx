@@ -10,7 +10,14 @@ const IconBar = ({ onClick }: IconBarProps) => {
   return (
     <div
       onClick={onClick}
-      className="absolute cursor-pointer text-2xl right-3 top-2 sm:hidden hover:opacity-50">
+      className="
+      absolute
+      cursor-pointer
+      text-2xl
+      right-3
+      top-3
+      sm:hidden
+      hover:opacity-50">
       <FaBars />
     </div>
   );

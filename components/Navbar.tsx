@@ -2,7 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 import Logo from './Logo';
+
 import ToggleDarkMode from './ToggleDarkMode';
 
 const Navbar = () => {
@@ -10,21 +12,31 @@ const Navbar = () => {
   return (
     <div
       className="
-    pt-10
+    pt-12
     sm:py-0
     fixed
     w-full
-    shadow-slate-950
     shadow 
+    shadow-slate-950
     dark:shadow-white
     bg-white
     dark:bg-black">
       <div
-        className="w-full hidden
-      sm:block ">
+        className="
+      absolute
+      top-0
+      left-2
+      p-1
+      sm:hidden">
+        <Logo />
+      </div>
+      <div
+        className="
+        w-full 
+        hidden
+        sm:block">
         <div
           className="
-      
       flex
       justify-between
       items-center
@@ -63,7 +75,11 @@ const Navbar = () => {
         ">
               <li>
                 <Link
-                  className={`transition duration-200 ease-in-out hover:opacity-50 ${
+                  className={`
+                  transition 
+                  duration-200 
+                  ease-in-out 
+                  hover:opacity-50 ${
                     pathname === '/'
                       ? 'text-black dark:text-white underline underline-offset-4 font-medium'
                       : ''
@@ -75,7 +91,11 @@ const Navbar = () => {
 
               <li>
                 <Link
-                  className={`transition duration-200 ease-in-out hover:opacity-50 ${
+                  className={`
+                  transition 
+                  duration-200 
+                  ease-in-out 
+                  hover:opacity-50 ${
                     pathname === '/about'
                       ? 'text-black dark:text-white underline underline-offset-4 font-medium'
                       : ''
@@ -87,7 +107,11 @@ const Navbar = () => {
 
               <li>
                 <Link
-                  className={`transition duration-200 ease-in-out hover:opacity-50 ${
+                  className={`
+                  transition 
+                  duration-200 
+                  ease-in-out 
+                  hover:opacity-50 ${
                     pathname === '/contact'
                       ? 'text-black dark:text-white underline underline-offset-4 font-medium'
                       : ''
