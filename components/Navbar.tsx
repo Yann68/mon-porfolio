@@ -20,7 +20,8 @@ const Navbar = () => {
     shadow-slate-950
     dark:shadow-white
     bg-white
-    dark:bg-black">
+    dark:bg-black
+    z-10">
       <div
         className="
       absolute

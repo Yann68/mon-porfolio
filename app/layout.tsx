@@ -22,7 +22,6 @@ export default function RootLayout({
       <html
         lang="en"
         suppressHydrationWarning>
-        <head />
         <body
           className={`${font.className}, text-gray-500 bg-[#ECECEC] dark:bg-dark-bg dark:text-slate-400`}>
           <ThemeProvider
@@ -32,7 +31,7 @@ export default function RootLayout({
             disableTransitionOnChange>
             <Navbar />
             <Sidebar />
-            <main className="pt-20 h-full w-full">{children}</main>
+            <main className="pt-16 md:pt-20 h-full w-full">{children}</main>
           </ThemeProvider>
         </body>
       </html>

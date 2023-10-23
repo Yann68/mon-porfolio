@@ -25,7 +25,7 @@ const Sidebar = () => {
       <div
         onClick={handleOpen}
         className={`${
-          open && 'sm:hidden w-full h-full absolute bg-black opacity-50 z-20'
+          open && 'sm:hidden w-full h-full fixed bg-black opacity-50 z-20'
         } `}
       />
       <div
@@ -37,7 +37,7 @@ const Sidebar = () => {
         w-52 
         pb-3 
         h-full 
-        absolute  
+        fixed  
         dark:bg-black 
         bg-slate-950 
         border-r 
@@ -48,7 +48,9 @@ const Sidebar = () => {
         items-center 
         pt-3 
         z-30 ${open ? 'translate-x-0' : '-translate-x-[210px]'}`}>
-        <Logo />
+        <div className="w-full ps-4">
+          <Logo />
+        </div>
         <div
           onClick={handleOpen}
           className="

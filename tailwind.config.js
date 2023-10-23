@@ -1,3 +1,6 @@
+const { Rotate3D } = require('lucide-react');
+const { transform } = require('typescript');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -69,10 +72,15 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        'spin-reverse': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(-360deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'spin-reverse': 'spin-reverse 5000ms linear infinite',
       },
     },
   },

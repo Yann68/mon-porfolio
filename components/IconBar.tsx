@@ -11,13 +11,14 @@ const IconBar = ({ onClick }: IconBarProps) => {
     <div
       onClick={onClick}
       className="
-      absolute
+     fixed
       cursor-pointer
       text-2xl
       right-3
       top-3
       sm:hidden
-      hover:opacity-50">
+      hover:opacity-50
+      z-20">
       <FaBars />
     </div>
   );
