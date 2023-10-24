@@ -18,8 +18,8 @@ import LogoChakraUi from '@/public/logo-chakraUi.svg';
 
 const Language = () => {
   return (
-    <div className="relative w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] rounded-full animate-[spin_5000ms_linear_infinite] ">
-      <div className=" absolute top-0 left-0 sm:left-3 sm:top-2 w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+    <div className="relative w-[220px] h-[220px] md:w-[270px] md:h-[270px] rounded-full animate-[spin_5000ms_linear_infinite]">
+      <div className=" absolute top-1 left-0 md:left-2 md:top-2 w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoReact}
           alt="Logo-react"
@@ -30,7 +30,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute top-0 left-[40%]  w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6]">
+      <div className="absolute top-1 left-[38%]  w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6]">
         <Image
           src={LogoJs}
           alt="Logo-javascript"
@@ -41,7 +41,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className="absolute top-0 right-0 sm:top-2 sm:right-3  w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className="absolute top-1 right-0 md:top-2 md:right-2  w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoNext}
           alt="Logo-next-js"
@@ -52,7 +52,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className="absolute top-[20%] left-[15%] sm:left-[20%] sm:top-[25%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className="absolute top-[22%] left-[15%] md:left-[18%] md:top-[22%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoHtml}
           alt="Logo-html"
@@ -63,7 +63,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute top-[20%] right-[15%] sm:right-[20%] sm:top-[25%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute top-[22%] right-[15%] md:right-[18%] md:top-[22%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoCss}
           alt="Logo-css"
@@ -74,7 +74,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute bottom-[13%] left-[28%] sm:bottom-[19%] sm:left-[32%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute bottom-[13%] left-[28%] md:bottom-[16%] md:left-[30%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoChakraUi}
           alt="Logo-chakraUi"
@@ -85,7 +85,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute bottom-0 right-0 sm:bottom-4 sm:right-2  w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute bottom-0 right-1 md:bottom-2 md:right-2  w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoNode}
           alt="Logo-node-js"
@@ -96,7 +96,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className="absolute -bottom-6 right-[29%] sm:right-[32%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className="absolute -bottom-6 right-[29%] md:right-[30%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoGithub}
           alt="Logo-github"
@@ -107,7 +107,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute bottom-0 left-0 sm:bottom-4 sm:left-2  w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute bottom-1 left-0 md:bottom-2 md:left-2  w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoVercel}
           alt="Logo-vercel"
@@ -118,7 +118,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute top-[28%] -left-6 sm:top-[30%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute top-[28%] -left-6 md:top-[30%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoMongoDb}
           alt="Logo-mongo-db"
@@ -129,7 +129,7 @@ const Language = () => {
           }}
         />
       </div>
-      <div className=" absolute top-[28%] -right-6 sm:top-[30%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full m-6">
+      <div className=" absolute top-[28%] -right-6 md:top-[30%] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full m-6">
         <Image
           src={LogoTailwind}
           alt="Logo-tailwind"
