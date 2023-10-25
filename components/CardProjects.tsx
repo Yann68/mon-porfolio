@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 
 import { StaticImageData } from 'next/image';
+import LogoGithub from '@/public/logo-github.png';
 
 import {
   Card,
@@ -30,7 +31,7 @@ const CardProjects = ({
 }: CardProjectsProps) => {
   const router = useRouter();
   return (
-    <Card className="w-[400px] ">
+    <Card className="">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -46,13 +47,19 @@ const CardProjects = ({
         />
       </CardContent>
       <CardFooter className="flex flex-col">
-        <p>Github</p>
-        <p
-          className="cursor-pointer"
-          onClick={() => router.push(githubLink)}>
-          {githubLink}
-        </p>
-        <p>Site</p>
+        {githubLink && (
+          <Image
+            src={LogoGithub}
+            alt="logo-github"
+            style={{
+              width: '35px',
+              height: '35px',
+            }}
+            className="cursor-pointer bg-black rounded-full border border-black"
+            onClick={() => router.push(githubLink)}
+          />
+        )}
+
         <p
           className="cursor-pointer"
           onClick={() => router.push(link)}>

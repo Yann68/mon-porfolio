@@ -17,4 +17,18 @@ export const DataProjects = [
     githubLink: '',
     link: 'https://goashart.vercel.app/',
   },
+  {
+    title: 'GoashArt',
+    description: 'Projet réalisé avec NextJs et ChakraUi, hébergé sur Vercel',
+    image: GoashArtImage,
+    githubLink: '',
+    link: 'https://goashart.vercel.app/',
+  },
+  {
+    title: 'GoashArt',
+    description: 'Projet réalisé avec NextJs et ChakraUi, hébergé sur Vercel',
+    image: GoashArtImage,
+    githubLink: '',
+    link: 'https://goashart.vercel.app/',
+  },
 ];

@@ -15,7 +15,7 @@ export default function Home() {
       <div className="w-full flex flex-col md:flex-row md:justify-around">
         <div className="w-full p-5 pt-0 md:w-[400px] lg:w-[500px] md:pt-5">
           <h1 className="font-semibold mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Bienvenue sur mon Porfolio
+            Bienvenue sur mon Portfolio
           </h1>
           <p className="text-sm sm:text-base md:text-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
@@ -92,7 +92,7 @@ export default function Home() {
         <h1 className="text-center underline underline-offset-2 md:underline-offset-4 decoration-slate-700 decoration-2 md:decoration-4 font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           Mes projets
         </h1>
-        <div className="mt-10 flex flex-wrap ">
+        <div className="mt-10 p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {DataProjects.map((project) => (
             <CardProjects
               key={project.title}
