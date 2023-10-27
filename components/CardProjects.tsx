@@ -15,6 +15,7 @@ import {
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Divider from './Divider';
+import Link from 'next/link';
 
 interface CardProjectsProps {
   title: string;
@@ -33,7 +34,7 @@ const CardProjects = ({
 }: CardProjectsProps) => {
   const router = useRouter();
   return (
-    <Card className="bg-slate-200 dark:bg-dark-bg shadow-md">
+    <Card className="bg-slate-200 dark:bg-gray-950 shadow-md">
       <CardHeader className=" pt-2 sm:min-h-[150px]">
         <CardTitle className="dark:text-gray-400 pb-2 font-bold">
           {title}
@@ -47,6 +48,7 @@ const CardProjects = ({
         <Image
           src={image}
           alt="kasaImage"
+          priority
           style={{
             width: '100%',
             height: '100%',
@@ -64,26 +66,31 @@ const CardProjects = ({
             <Button
               className={`cursor-pointer h-9 w-[150px] ${
                 !githubLink && 'sm:mt-2'
-              }`}
-              onClick={() => router.push(link)}>
-              Voir site
+              }`}>
+              <Link
+                target="_blank"
+                href={link}>
+                Voir site
+              </Link>
             </Button>
           )}
           {githubLink && (
-            <div
-              onClick={() => router.push(githubLink)}
+            <Link
+              href={githubLink}
+              target="_blank"
               className="flex flex-col items-center cursor-pointer hover:opacity-70">
               <Image
                 src={LogoGithub}
                 alt="logo-github"
+                priority
                 style={{
                   width: '35px',
                   height: '35px',
                 }}
                 className="bg-black rounded-full border border-black"
               />
-              <p className="font-semibold">Github</p>
-            </div>
+              <p className="hidden md:block font-semibold">Github</p>
+            </Link>
           )}
         </div>
       </CardFooter>

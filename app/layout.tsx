@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Oswald } from 'next/font/google';
 import Sidebar from '@/components/Sidebar';
 import { ThemeProvider } from '@/components/providers/Theme-providers';
+import Footer from '@/components/Footer';
 
 const font = Oswald({ subsets: ['latin'] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Navbar />
             <Sidebar />
             <main className="pt-16 md:pt-20 h-full w-full">{children}</main>
+            <Footer />
           </ThemeProvider>
         </body>
       </html>

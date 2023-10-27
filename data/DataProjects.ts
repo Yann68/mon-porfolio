@@ -48,7 +48,8 @@ export const DataProjects = [
   },
   {
     title: 'Kanap',
-    description: 'Projet réalisé avec javascript et CSS',
+    description:
+      "Projet basé sur l'utilisation d'une API, réalisé avec javascript et CSS",
     image: KanapImage,
     githubLink: 'https://github.com/Yann68/kanap',
     link: '',

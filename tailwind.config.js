@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'dark-bg':
-          'linear-gradient(171deg, rgba(0,0,0,1) 23%, rgba(3,0,51,1) 64%, rgba(0,2,50,1) 100%)',
+          'linear-gradient(176deg, rgba(0,0,0,1) 26%, rgba(0,0,43,1) 82%, rgba(0,3,40,1) 100%)',
       },
       colors: {
         border: 'hsl(var(--border))',

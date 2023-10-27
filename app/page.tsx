@@ -6,10 +6,17 @@ import Language from '@/components/Language';
 import { Button } from '@/components/ui/button';
 import CardProjects from '@/components/CardProjects';
 import { DataProjects } from '@/data/DataProjects';
-import { useRouter } from 'next/navigation';
+
+import { useRef, RefObject } from 'react';
 
 export default function Home() {
-  const router = useRouter();
+  const ref: RefObject<HTMLDivElement> = useRef(null);
+
+  const scrollToProject = () => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className="h-full flex flex-col">
       <div className="w-full flex flex-col md:flex-row md:justify-around">
@@ -23,7 +30,7 @@ export default function Home() {
             voluptatibus similique illo?
           </p>
           <div className="p-3">
-            <Button>Mes projets</Button>
+            <Button onClick={scrollToProject}>Mes projets</Button>
           </div>
         </div>
         <div className="flex justify-center">
@@ -47,7 +54,7 @@ export default function Home() {
           Mes connaissances
         </h1>
         <div className="flex justify-evenly flex-col md:flex-row mt-6">
-          <div className="flex justify-center md:ml-3 ">
+          <div className="flex justify-center items-center md:ml-3 ">
             <Language />
           </div>
           <div className="md:w-[500px] mt-4 md:mt-8 mx-4 sm:mx-8 flex flex-wrap justify-between">
@@ -88,13 +95,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div ref={ref}></div>
       </div>
       <Divider />
       <div>
         <h1 className="text-center underline underline-offset-2 md:underline-offset-4 decoration-slate-700 decoration-2 md:decoration-4 font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
           Mes projets
         </h1>
-        <div className="mt-10 p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="mt-4 md:mt-10 p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {DataProjects.map((project) => (
             <CardProjects
               key={project.title}

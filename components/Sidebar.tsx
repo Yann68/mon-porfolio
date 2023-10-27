@@ -6,6 +6,9 @@ import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 import IconBar from './IconBar';
 import { FaXmark } from 'react-icons/fa6';
+import { FaHouse } from 'react-icons/fa6';
+import { FaCircleInfo } from 'react-icons/fa6';
+import { FaEnvelope } from 'react-icons/fa6';
 
 import ToggleDarkMode from './ToggleDarkMode';
 
@@ -17,6 +20,11 @@ const Sidebar = () => {
 
   const handleOpen = () => {
     setOpen(!open);
+    if (!open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   };
 
   return (
@@ -47,7 +55,8 @@ const Sidebar = () => {
         flex-col 
         items-center 
         pt-3 
-        z-30 ${open ? 'translate-x-0' : '-translate-x-[210px]'}`}>
+        z-30
+        ${open ? 'translate-x-0' : '-translate-x-[210px]'}`}>
         <div className="w-full ps-4">
           <Logo />
         </div>
@@ -69,16 +78,22 @@ const Sidebar = () => {
           font-semibold
           flex-col
           pt-6
-          space-y-5">
+          space-y-5
+          w-[150px]">
             <li>
               <Link
                 onClick={handleOpen}
                 className={` 
+                flex
+                items-center
                 transition 
                 duration-200 
                 ease-in-out 
                 hover:opacity-50 ${pathname === '/' ? 'text-white' : ''}`}
                 href={'/'}>
+                <div className="mr-3">
+                  <FaHouse />
+                </div>
                 Accueil
               </Link>
             </li>
@@ -86,11 +101,16 @@ const Sidebar = () => {
               <Link
                 onClick={() => setOpen(false)}
                 className={` 
+                flex
+                items-center
                 transition 
                 duration-200 
                 ease-in-out 
                 hover:opacity-50 ${pathname === '/about' ? 'text-white' : ''}`}
                 href={'/about'}>
+                <div className="mr-3">
+                  <FaCircleInfo />
+                </div>
                 A propos
               </Link>
             </li>
@@ -98,6 +118,8 @@ const Sidebar = () => {
               <Link
                 onClick={() => setOpen(false)}
                 className={` 
+                flex
+                items-center
                 transition 
                 duration-200 
                 ease-in-out 
@@ -105,6 +127,9 @@ const Sidebar = () => {
                   pathname === '/contact' ? 'text-white' : ''
                 }`}
                 href={'/contact'}>
+                <div className="mr-3">
+                  <FaEnvelope />
+                </div>
                 Contact
               </Link>
             </li>
