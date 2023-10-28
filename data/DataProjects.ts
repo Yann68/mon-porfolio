@@ -1,10 +1,10 @@
-import kasaImage from '@/public/kasa.png';
-import GoashArtImage from '@/public/goashArt.png';
-import OhmyfoodImage from '@/public/ohmyfood.png';
-import PanthereImage from '@/public/panthere.png';
-import KanapImage from '@/public/kanap.png';
-import PiquanteImage from '@/public/piquante.png';
-import PortfolioImage from '@/public/portfolio.png';
+import kasaImage from '../public/kasa.png';
+import GoashArtImage from '../public/goashArt.png';
+import OhmyfoodImage from '../public/ohmyfood.png';
+import PanthereImage from '../public/panthere.png';
+import KanapImage from '../public/kanap.png';
+import PiquanteImage from '../public/piquante.png';
+import PortfolioImage from '../public/portfolio.png';
 
 export const DataProjects = [
   {
