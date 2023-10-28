@@ -8,19 +8,21 @@ import LogoSite from '@/public/logo-lion.png';
 const Logo = () => {
   const router = useRouter();
   return (
-    <Image
-      onClick={() => router.push('/')}
-      alt="logo"
-      src={LogoSite}
-      className="
+    <div className="w-8 h-8 sm:w-11 sm:h-11">
+      <Image
+        onClick={() => router.push('/')}
+        alt="logo"
+        src={LogoSite}
+        className="
       cursor-pointer 
       rounded-full"
-      priority
-      style={{
-        height: '40px',
-        width: '40px',
-      }}
-    />
+        priority
+        style={{
+          height: '100%',
+          width: '100%',
+        }}
+      />
+    </div>
   );
 };
 

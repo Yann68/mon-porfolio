@@ -19,7 +19,7 @@ const ToggleDarkMode = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="h-6 w-6"
+          className="h-8 w-8"
           variant="outline"
           size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

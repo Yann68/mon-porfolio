@@ -14,11 +14,13 @@ const IconBar = ({ onClick }: IconBarProps) => {
      fixed
       cursor-pointer
       text-2xl
-      right-3
+      right-7
       top-3
       sm:hidden
       hover:opacity-50
-      z-20">
+      z-20
+      text-secondary
+      dark:text-primary">
       <FaBars />
     </div>
   );
