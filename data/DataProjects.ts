@@ -1,3 +1,4 @@
+'use client';
 import kasaImage from '../public/kasa.png';
 import GoashArtImage from '../public/goashArt.png';
 import OhmyfoodImage from '../public/ohmyfood.png';
