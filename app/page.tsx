@@ -5,7 +5,7 @@ import Divider from '@/components/Divider';
 import Language from '@/components/Language';
 import { Button } from '@/components/ui/button';
 import CardProjects from '@/components/CardProjects';
-import { DataProjects } from '@/data/DataProjects';
+import { DataProjects } from '@/data/data';
 import { useRouter } from 'next/navigation';
 
 import { useRef, RefObject } from 'react';
@@ -115,7 +115,7 @@ export default function Home() {
               key={project.title}
               title={project.title}
               description={project.description}
-              image={project.image}
+              picture={project.picture}
               githubLink={project.githubLink}
               link={project.link}
             />

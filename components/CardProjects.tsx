@@ -1,6 +1,5 @@
 'use client';
 
-import { StaticImageData } from 'next/image';
 import LogoGithub from '@/public/logo-github.png';
 
 import {
@@ -20,7 +19,7 @@ import { cn } from '@/lib/utils';
 interface CardProjectsProps {
   title: string;
   description: string;
-  image: StaticImageData;
+  picture: string;
   githubLink: string;
   link: string;
 }
@@ -28,7 +27,7 @@ interface CardProjectsProps {
 const CardProjects = ({
   title,
   description,
-  image,
+  picture,
   githubLink,
   link,
 }: CardProjectsProps) => {
@@ -37,13 +36,12 @@ const CardProjects = ({
       <CardContent className="p-4 pb-2">
         <Image
           className="rounded-sm shadow-sm dark:shadow-primary"
-          src={image}
-          alt="kasaImage"
-          priority
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
+          src={picture}
+          alt={title}
+          width={0}
+          height={0}
+          sizes="auto"
+          style={{ width: '100%', height: 'auto' }}
         />
       </CardContent>
       <CardHeader className="pt-2 pb-0 sm:min-h-[125px]">
