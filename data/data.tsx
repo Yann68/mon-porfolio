@@ -21,7 +21,7 @@ export const DataProjects = [
     title: 'Kasa',
     description:
       'Projet réalisé avec React.js et CSS modules. Ce projet est hébergé sur Vercel',
-    picture: 'https://i.ibb.co/F36rMyc/panthere.png',
+    picture: 'https://i.ibb.co/W2mc4HV/kasa.png',
     githubLink: 'https://github.com/Yann68/kasa',
     link: 'https://kasa-yann68.vercel.app/',
   },
