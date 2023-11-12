@@ -23,14 +23,16 @@ export default function Home() {
   return (
     <div className="h-full flex flex-col">
       <div className="w-full flex flex-col md:flex-row md:justify-around">
-        <div className="w-full p-5 pt-0 max-w-[400px] md:max-w-[400px] lg:max-w-[500px] md:pt-5">
+        <div className="w-full p-5 pt-0  md:max-w-[400px] lg:max-w-[500px] md:pt-5">
           <h1 className="text-primary font-semibold mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Bienvenue sur mon Portfolio
           </h1>
           <p className="text-secondary-foreground dark:text-primary-foreground text-sm sm:text-base md:text-lg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-            aspernatur optio harum nostrum voluptatem quam eos mollitia
-            voluptatibus similique illo?
+            Développeur Full Stack passionné par React.js et Next.js, je crée
+            des expériences utilisateur exceptionnelles en combinant des
+            composants frontend réactifs avec des architectures backend
+            robustes. Ma spécialisation dans Next.js me permet de concevoir des
+            applications web rapides et bien référencées.
           </p>
           <div className="py-3">
             <Button
@@ -41,7 +43,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="w-full h-[270px] sm:h-[300px] sm:w-[600px] md:p-3 md:h-[350px] md:w-[500px] lg:w-[600px]">
+          <div className="w-full h-[270px] sm:h-[300px] sm:w-[600px] md:p-3 md:h-[350px] md:w-[450px] lg:w-[600px]">
             <Image
               alt="ordinateur"
               src={ImageComputer}
@@ -126,11 +128,11 @@ export default function Home() {
       <div className="my-3 px-5 flex flex-col items-center">
         <div>
           <h3 className="font-semibold text-primary text-2xl md:text-3xl">
-            Vous souhaitez me contacté ?
+            Vous souhaitez me contacter ?
           </h3>
           <p className="text-secondary-foreground dark:text-primary-foreground py-2 text-sm sm:text-base md:text-lg">
-            Pour toutes informations complémentaire,
-            <br /> vous pouvez me contacté en remplissant le formulaire
+            Pour toutes informations complémentaires,
+            <br /> vous pouvez me contacter en remplissant le formulaire
           </p>
           <div className="flex justify-end">
             <Button

@@ -15,7 +15,7 @@ export const DataProjects = [
       'Projet réalisé avec Next.js, Typescrypt, shadcn/ui. Ce projet est hébergé sur vercel',
     picture: 'https://i.ibb.co/Mfd5FRs/portfolio.png',
     githubLink: 'https://github.com/Yann68/mon-porfolio',
-    link: '',
+    link: 'https://tschudy-yann-portfolio.vercel.app/',
   },
   {
     title: 'Kasa',
