@@ -13,7 +13,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { Textarea } from './ui/textarea';
+import { useState } from 'react';
 const FormContact = () => {
+  const [disabled, setDisabled] = useState(false);
   const formSchema = z.object({
     firstName: z
       .string()
@@ -66,6 +68,7 @@ const FormContact = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      setDisabled(true);
       const response = await fetch('https://formspree.io/f/maygkrlj', {
         method: 'POST',
         body: JSON.stringify(values),
@@ -76,6 +79,7 @@ const FormContact = () => {
       if (!response.ok) {
         throw new Error('HTTP error! status: ' + response.status);
       }
+      setDisabled(false);
       const responseData = await response.json();
 
       console.log(responseData);
@@ -158,7 +162,8 @@ const FormContact = () => {
           )}
         />
         <Button
-          className="w-full bg-secondary text-secondary-foreground hover:bg-secondary hover:opacity-90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary dark:hover:opacity-90"
+          disabled={disabled}
+          className="w-full bg-secondary text-primary hover:bg-secondary hover:opacity-90 dark:bg-primary dark:text-secondary dark:hover:bg-primary dark:hover:opacity-90"
           type="submit">
           Souscrire
         </Button>

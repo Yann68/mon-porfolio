@@ -59,9 +59,9 @@ export default function Home() {
       </div>
       <Divider />
       <div className="relative z-0 flex flex-col w-full">
-        <h1 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
+        <h2 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
           Mes connaissances
-        </h1>
+        </h2>
         <div className="flex justify-evenly flex-col md:flex-row mt-6">
           <div className="flex justify-center items-center md:ml-3 ">
             <Language />
@@ -108,9 +108,9 @@ export default function Home() {
       </div>
       <Divider />
       <div>
-        <h1 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
+        <h2 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
           Mes projets
-        </h1>
+        </h2>
         <div className="mt-4 md:mt-10 p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {DataProjects.map((project) => (
             <CardProjects

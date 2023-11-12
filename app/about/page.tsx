@@ -7,9 +7,9 @@ import { useRouter } from 'next/navigation';
 const AboutPage = () => {
   const router = useRouter();
   return (
-    <div className="p-5">
-      <h1 className="text-primary underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-        A propos de moi
+    <>
+      <h1 className="text-primary font-semibold mb-3 text-3xl sm:text-4xl md:text-5xl">
+        A propos de moi !
       </h1>
       <div className="float-right mx-2 md:mx-5 mb-5 md:mb-0 w-[120px] h-[190px] sm:w-[200px] sm:h-[300px] md:w-[250px] md:h-[400px] ">
         <Image
@@ -67,7 +67,7 @@ const AboutPage = () => {
       <div className="mt-3 md:my-5 w-full flex justify-end">
         <Button onClick={() => router.push('/contact')}>Contactez-moi</Button>
       </div>
-    </div>
+    </>
   );
 };
 
