@@ -13,14 +13,14 @@ export const DataProjects = [
     title: 'Mon Portfolio',
     description:
       'Projet réalisé avec Next.js, Typescrypt, shadcn/ui. Ce projet est hébergé sur vercel',
-    picture: 'https://i.ibb.co/Mfd5FRs/portfolio.png',
+    picture: 'https://i.ibb.co/pZ3hRm8/portfolio.png',
     githubLink: 'https://github.com/Yann68/mon-porfolio',
     link: 'https://tschudy-yann-portfolio.vercel.app/',
   },
   {
     title: 'Kasa',
     description:
-      'Projet réalisé avec React.js et CSS modules. Ce projet est hébergé sur Vercel',
+      'Projet réalisé avec React et CSS modules. Ce projet est hébergé sur Vercel',
     picture: 'https://i.ibb.co/W2mc4HV/kasa.png',
     githubLink: 'https://github.com/Yann68/kasa',
     link: 'https://kasa-yann68.vercel.app/',

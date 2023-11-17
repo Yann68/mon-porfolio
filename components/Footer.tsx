@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div
       className="w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary
-    dark:bg-secondary p-5">
+    dark:bg-secondary p-5 pt-2">
       <nav className="mt-3 sm:md-0">
         <ul
           className="
@@ -72,7 +72,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <p className="mt-3 sm:md-0 text-secondary-foreground dark:text-primary-foreground text-sm sm:text-base md:text-lg">
+      <p className="order-first sm:order-none mt-3 sm:md-0 text-secondary-foreground dark:text-primary-foreground text-sm sm:text-base md:text-lg">
         &copy;Copyright {currentYear}
       </p>
       <Logo />

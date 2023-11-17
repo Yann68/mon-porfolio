@@ -28,11 +28,11 @@ export default function Home() {
             Bienvenue sur mon Portfolio
           </h1>
           <p className="text-secondary-foreground dark:text-primary-foreground text-sm sm:text-base md:text-lg">
-            Développeur Full Stack passionné par React.js et Next.js, je crée
-            des expériences utilisateur exceptionnelles en combinant des
-            composants frontend réactifs avec des architectures backend
-            robustes. Ma spécialisation dans Next.js me permet de concevoir des
-            applications web rapides et bien référencées.
+            Développeur Full Stack passionné par React et Next.js, je crée des
+            expériences utilisateur exceptionnelles en combinant des composants
+            frontend réactifs avec des architectures backend robustes. Ma
+            spécialisation dans Next.js me permet de concevoir des applications
+            web rapides et bien référencées.
           </p>
           <div className="py-3">
             <Button
@@ -74,7 +74,7 @@ export default function Home() {
               <ul className="text-secondary-foreground dark:text-primary-foreground text-base sm:text-lg md:text-xl md:list-disc">
                 <li>Html5</li>
                 <li>Javascript</li>
-                <li>React.js</li>
+                <li>React</li>
                 <li>Next.js</li>
               </ul>
             </div>
