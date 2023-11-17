@@ -26,7 +26,7 @@ export default function RootLayout({
         <body className={`${font.className}, bg-secondary dark:bg-dark-bg`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange>
             <Navbar />

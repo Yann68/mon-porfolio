@@ -9,7 +9,7 @@ import Logo from './Logo';
 
 const Footer = () => {
   const pathname = usePathname();
-
+  const currentYear = new Date().getFullYear();
   return (
     <div
       className="w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary
@@ -73,7 +73,7 @@ const Footer = () => {
         </ul>
       </nav>
       <p className="mt-3 sm:md-0 text-secondary-foreground dark:text-primary-foreground text-sm sm:text-base md:text-lg">
-        Mentions Légales
+        &copy;Copyright {currentYear}
       </p>
       <Logo />
     </div>

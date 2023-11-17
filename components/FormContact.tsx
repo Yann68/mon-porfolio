@@ -14,8 +14,11 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { Textarea } from './ui/textarea';
 import { useState } from 'react';
+import Modal from './Modal';
 const FormContact = () => {
   const [disabled, setDisabled] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
+  const [errorForm, setErrorForm] = useState(false);
   const formSchema = z.object({
     firstName: z
       .string()
@@ -77,16 +80,29 @@ const FormContact = () => {
         },
       });
       if (!response.ok) {
+        setDisabled(false);
+        setModalActive(true);
+        setErrorForm(true);
         throw new Error('HTTP error! status: ' + response.status);
       }
-      setDisabled(false);
       const responseData = await response.json();
+      setDisabled(false);
+      setModalActive(true);
+      setErrorForm(false);
 
       console.log(responseData);
     } catch (error) {
       console.log(error);
+      setTimeout(() => {
+        setDisabled(false);
+      }, 5000);
     }
   }
+
+  const onCloseModal = () => {
+    setModalActive(false);
+    setDisabled(false);
+  };
 
   return (
     <Form {...form}>
@@ -161,12 +177,13 @@ const FormContact = () => {
             </FormItem>
           )}
         />
-        <Button
+        <Modal
+          modalActive={modalActive}
           disabled={disabled}
-          className="w-full bg-secondary text-primary hover:bg-secondary hover:opacity-90 dark:bg-primary dark:text-secondary dark:hover:bg-primary dark:hover:opacity-90"
-          type="submit">
-          Souscrire
-        </Button>
+          errorForm={errorForm}
+          onSubmit={onSubmit}
+          onCloseModal={onCloseModal}
+        />
       </form>
     </Form>
   );
