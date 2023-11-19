@@ -1,6 +1,19 @@
+'use client';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
+
 const ContactPage = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="md:max-w-[400px] md:mx-5 rounded p-3 pt-0">
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateX(100%)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
+      }}
+      className="md:max-w-[400px] md:mx-5 rounded p-3 pt-0">
       <h2 className="text-primary mb-3 font-semibold mt-3 text-3xl sm:text-4xl">
         Contactez-moi pour discuter de projets !
       </h2>

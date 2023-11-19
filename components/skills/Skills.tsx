@@ -19,7 +19,7 @@ const Skills = () => {
       }}
       className="relative z-0 flex flex-col w-full">
       <h2 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
-        Mes connaissances
+        Mes compétences
       </h2>
       <div className="flex justify-evenly flex-col md:flex-row mt-6">
         <motion.div

@@ -4,23 +4,19 @@ import { Button } from '../ui/button';
 import ImageComputer from '@/public/image1.jpg';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
-
-  const scrollToProject = () => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const router = useRouter();
 
   return (
     <div className="w-full flex flex-col md:flex-row md:justify-around">
       <div
         ref={ref}
         style={{
-          transform: isInView ? 'none' : 'translateX(100%)',
+          transform: isInView ? 'none' : 'translateX(-100%)',
           opacity: isInView ? 1 : 0,
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
         }}
@@ -37,9 +33,9 @@ const Header = () => {
         </p>
         <div className="py-3">
           <Button
-            className="h-8 w-[150px] md:h-10"
-            onClick={scrollToProject}>
-            Mes projets
+            onClick={() => router.push('/about')}
+            className="h-8 w-[150px] md:h-10">
+            A propos de moi
           </Button>
         </div>
       </div>
