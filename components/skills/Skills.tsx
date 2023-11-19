@@ -10,15 +10,15 @@ const Skills = () => {
   });
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="relative z-0 flex flex-col w-full">
-      <h2
-        ref={ref}
-        style={{
-          transform: isInView ? 'none' : 'translateX(-100%)',
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
-        }}
-        className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateX(-100%)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
+      }}
+      className="relative z-0 flex flex-col w-full">
+      <h2 className="text-primary text-center underline underline-offset-2 md:underline-offset-4 decoration-primary decoration-2 md:decoration-[3px] font-semibold mt-3 text-3xl sm:text-4xl md:text-5xl">
         Mes connaissances
       </h2>
       <div className="flex justify-evenly flex-col md:flex-row mt-6">

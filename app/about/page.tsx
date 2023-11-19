@@ -3,11 +3,21 @@ import Image from 'next/image';
 import photoProfil from '@/public/photo-profil.jpg';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 const AboutPage = () => {
   const router = useRouter();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <>
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateX(100%)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
+      }}>
       <h1 className="text-primary font-semibold mb-3 text-3xl sm:text-4xl md:text-5xl">
         A propos de moi !
       </h1>
@@ -67,7 +77,7 @@ const AboutPage = () => {
       <div className="mt-3 md:my-5 w-full flex justify-end">
         <Button onClick={() => router.push('/contact')}>Contactez-moi</Button>
       </div>
-    </>
+    </div>
   );
 };
 

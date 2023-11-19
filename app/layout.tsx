@@ -31,7 +31,9 @@ export default function RootLayout({
             disableTransitionOnChange>
             <Navbar />
             <Sidebar />
-            <main className="pt-16 md:pt-20 h-full w-full">{children}</main>
+            <main className="overflow-x-hidden pt-16 md:pt-20 h-full w-full">
+              {children}
+            </main>
             <Footer />
           </ThemeProvider>
         </body>
