@@ -9,7 +9,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -17,7 +17,6 @@ interface FormProps {
   disabled: boolean;
   modalActive: boolean;
   errorForm: boolean;
-  onSubmit: any;
   onCloseModal: () => void;
 }
 
@@ -25,7 +24,6 @@ const Modal = ({
   disabled,
   modalActive,
   errorForm,
-  onSubmit,
   onCloseModal,
 }: FormProps) => {
   const router = useRouter();

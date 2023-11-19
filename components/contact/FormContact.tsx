@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import { Textarea } from './ui/textarea';
+import { Textarea } from '../ui/textarea';
 import { useState } from 'react';
 import Modal from './Modal';
 const FormContact = () => {
@@ -181,7 +181,6 @@ const FormContact = () => {
           modalActive={modalActive}
           disabled={disabled}
           errorForm={errorForm}
-          onSubmit={onSubmit}
           onCloseModal={onCloseModal}
         />
       </form>
