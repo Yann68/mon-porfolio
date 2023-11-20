@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Logo from './Logo';
+import Logo from '../Logo';
 import IconBar from './IconBar';
 import { FaXmark } from 'react-icons/fa6';
 import { FaHouse } from 'react-icons/fa6';
 import { FaCircleInfo } from 'react-icons/fa6';
 import { FaEnvelope } from 'react-icons/fa6';
 
-import ToggleDarkMode from './ToggleDarkMode';
+import ToggleDarkMode from '../ToggleDarkMode';
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';

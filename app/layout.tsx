@@ -1,10 +1,11 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/header/Navbar';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Oswald } from 'next/font/google';
-import Sidebar from '@/components/Sidebar';
+import Sidebar from '@/components/header/Sidebar';
 import { ThemeProvider } from '@/components/providers/Theme-providers';
 import Footer from '@/components/Footer';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const font = Oswald({ subsets: ['latin'] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <ClerkProvider>
       <html
         lang="en"
         suppressHydrationWarning>
@@ -38,6 +39,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    </>
+    </ClerkProvider>
   );
 }

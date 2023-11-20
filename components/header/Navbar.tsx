@@ -1,15 +1,15 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-import Logo from './Logo';
-
-import ToggleDarkMode from './ToggleDarkMode';
+import { UserButton } from '@clerk/nextjs';
+import Logo from '../Logo';
+import ToggleDarkMode from '../ToggleDarkMode';
 import { cn } from '@/lib/utils';
+import { userId } from '../auth';
 
 const Navbar = () => {
   const pathname = usePathname();
+
   return (
     <header
       className="
@@ -118,7 +118,37 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          <ToggleDarkMode />
+          <div className="flex space-x-4">
+            <ToggleDarkMode />
+            {userId ? (
+              <>
+                <Link
+                  className={cn(
+                    'transition duration-200 ease-in-out hover:opacity-80',
+                    pathname === '/sign-in'
+                      ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
+                      : ''
+                  )}
+                  href="sign-in">
+                  Sign In
+                </Link>
+                <Link
+                  className={cn(
+                    'transition duration-200 ease-in-out hover:opacity-80',
+                    pathname === '/sign-up'
+                      ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
+                      : ''
+                  )}
+                  href="sign-up">
+                  Sign Up
+                </Link>
+              </>
+            ) : (
+              ''
+            )}
+
+            <UserButton afterSignOutUrl="/" />
+          </div>
         </div>
       </div>
     </header>
