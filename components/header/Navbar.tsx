@@ -5,10 +5,11 @@ import { UserButton } from '@clerk/nextjs';
 import Logo from '../Logo';
 import ToggleDarkMode from '../ToggleDarkMode';
 import { cn } from '@/lib/utils';
-import { userId } from '../auth';
+import { useAuth } from '@clerk/nextjs';
 
 const Navbar = () => {
   const pathname = usePathname();
+  const { userId } = useAuth();
 
   return (
     <header
@@ -120,7 +121,7 @@ const Navbar = () => {
           </nav>
           <div className="flex space-x-4">
             <ToggleDarkMode />
-            {userId ? (
+            {!userId ? (
               <>
                 <Link
                   className={cn(
