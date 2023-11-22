@@ -125,7 +125,7 @@ const Navbar = () => {
               <>
                 <Link
                   className={cn(
-                    'transition duration-200 ease-in-out hover:opacity-80',
+                    'text-secondary-foreground dark:text-primary-foreground transition duration-200 ease-in-out hover:opacity-80',
                     pathname === '/sign-in'
                       ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
                       : ''
@@ -135,7 +135,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   className={cn(
-                    'transition duration-200 ease-in-out hover:opacity-80',
+                    'text-secondary-foreground dark:text-primary-foreground transition duration-200 ease-in-out hover:opacity-80',
                     pathname === '/sign-up'
                       ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
                       : ''
