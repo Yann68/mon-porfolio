@@ -8,15 +8,18 @@ import { FaXmark } from 'react-icons/fa6';
 import { FaHouse } from 'react-icons/fa6';
 import { FaCircleInfo } from 'react-icons/fa6';
 import { FaEnvelope } from 'react-icons/fa6';
+import { FaArrowRightToBracket } from 'react-icons/fa6';
 
 import ToggleDarkMode from '../ToggleDarkMode';
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { UserButton, useAuth } from '@clerk/nextjs';
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { userId } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -130,9 +133,30 @@ const Sidebar = () => {
                 Contact
               </Link>
             </li>
+            {!userId && (
+              <li>
+                <Link
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    'flex items-center transition duration-200 ease-in-out hover:opacity-80',
+                    pathname === '/sign-in' || pathname === '/sign-up'
+                      ? 'text-secondary dark:text-primary'
+                      : 'text-secondary-foreground dark:text-primary-foreground'
+                  )}
+                  href={'/sign-in'}>
+                  <div className="mr-3">
+                    <FaArrowRightToBracket />
+                  </div>
+                  Connexion
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
-        <ToggleDarkMode />
+        <div className="space-y-2">
+          {userId && <UserButton afterSignOutUrl="/" />}
+          <ToggleDarkMode />
+        </div>
       </div>
     </>
   );

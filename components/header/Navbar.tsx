@@ -45,9 +45,10 @@ const Navbar = () => {
       justify-between
       items-center
       py-1
-      px-8
+      px-4
       w-full">
           <Logo />
+
           <nav className="relative">
             <div
               className="
@@ -119,36 +120,21 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          <div className="flex space-x-4">
-            <ToggleDarkMode />
-            {!userId ? (
-              <>
-                <Link
-                  className={cn(
-                    'text-secondary-foreground dark:text-primary-foreground transition duration-200 ease-in-out hover:opacity-80',
-                    pathname === '/sign-in'
-                      ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
-                      : ''
-                  )}
-                  href="sign-in">
-                  Sign In
-                </Link>
-                <Link
-                  className={cn(
-                    'text-secondary-foreground dark:text-primary-foreground transition duration-200 ease-in-out hover:opacity-80',
-                    pathname === '/sign-up'
-                      ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
-                      : ''
-                  )}
-                  href="sign-up">
-                  Sign Up
-                </Link>
-              </>
-            ) : (
-              ''
+          <div className="flex items-center justify-between space-x-4">
+            {!userId && (
+              <Link
+                className={cn(
+                  'text-secondary-foreground dark:text-primary-foreground transition duration-200 ease-in-out hover:opacity-80',
+                  pathname === '/sign-in' || pathname === '/sign-up'
+                    ? 'text-secondary dark:text-primary underline underline-offset-4 font-medium'
+                    : ''
+                )}
+                href="sign-in">
+                Connexion
+              </Link>
             )}
-
-            <UserButton afterSignOutUrl="/" />
+            <ToggleDarkMode />
+            {userId && <UserButton afterSignOutUrl="/" />}
           </div>
         </div>
       </div>
