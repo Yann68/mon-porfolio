@@ -6,6 +6,7 @@ import Sidebar from '@/components/header/Sidebar';
 import { ThemeProvider } from '@/components/providers/Theme-providers';
 import Footer from '@/components/Footer';
 import { ClerkProvider } from '@clerk/nextjs';
+export const runtime = 'edge';
 
 const font = Oswald({ subsets: ['latin'] });
 
