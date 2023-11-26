@@ -8,7 +8,7 @@ import Divider from '@/components/Divider';
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="pt-16 md:pt-20 flex flex-col">
       <Header />
       <Divider />
       <Skills />

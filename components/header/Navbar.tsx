@@ -13,18 +13,15 @@ const Navbar = () => {
 
   return (
     <header
-      className="
-    pt-12
-    sm:py-0
-    fixed
-    w-full
-    shadow 
-    shadow-primary
-    dark:shadow-primary
-    bg-primary
-    dark:bg-secondary
-    opacity-95
-    z-10">
+      className={cn(
+        'pt-12 sm:py-0 fixed w-full shadow shadow-primary dark:shadow-primary bg-primary dark:bg-secondary opacity-95 z-10',
+        pathname === '/sign-in' ||
+          pathname === '/sign-up' ||
+          pathname === '/sign-in/factor-one' ||
+          pathname === '/sign-up/verify-email-address'
+          ? 'hidden'
+          : ''
+      )}>
       <div
         className="
       absolute

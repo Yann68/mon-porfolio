@@ -10,10 +10,18 @@ import Logo from './Logo';
 const Footer = () => {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
   return (
     <div
-      className="w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary
-    dark:bg-secondary p-5 pt-2">
+      className={cn(
+        'w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary dark:bg-secondary p-5 pt-2',
+        pathname === '/sign-in' ||
+          pathname === '/sign-up' ||
+          pathname === '/sign-in/factor-one' ||
+          pathname === '/sign-up/verify-email-address'
+          ? 'hidden'
+          : ''
+      )}>
       <nav className="mt-3 sm:md-0">
         <ul
           className="

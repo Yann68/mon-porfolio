@@ -6,7 +6,7 @@ import Sidebar from '@/components/header/Sidebar';
 import { ThemeProvider } from '@/components/providers/Theme-providers';
 import Footer from '@/components/Footer';
 import { ClerkProvider } from '@clerk/nextjs';
-export const runtime = 'edge';
+import { frFR } from '@clerk/localizations';
 
 const font = Oswald({ subsets: ['latin'] });
 
@@ -21,7 +21,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      localization={frFR}
+      appearance={{
+        elements: {
+          rootBox: 'w-full sm:w-auto flex justify-center',
+          card: 'bg-slate-900 rounded-none sm:rounded-xl',
+          headerTitle: 'text-primary',
+          headerSubtitle: 'text-primary',
+          socialButtonsBlockButton:
+            'text-secondary bg-primary hover:bg-primary-foreground',
+          dividerText: 'text-primary',
+          dividerLine: 'bg-primary',
+          formFieldLabel: 'text-primary',
+          formFieldHintText: 'hidden',
+          formButtonPrimary:
+            'bg-primary text-secondary hover:bg-primary-foreground',
+          footerActionText: 'text-primary',
+        },
+      }}>
       <html
         lang="en"
         suppressHydrationWarning>
@@ -33,9 +51,7 @@ export default function RootLayout({
             disableTransitionOnChange>
             <Navbar />
             <Sidebar />
-            <main className="overflow-x-hidden pt-16 md:pt-20 h-full w-full">
-              {children}
-            </main>
+            <main className="overflow-x-hidden h-full w-full">{children}</main>
             <Footer />
           </ThemeProvider>
         </body>
