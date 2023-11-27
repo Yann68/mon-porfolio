@@ -9,6 +9,31 @@ body,
   background-attachment: fixed;
 }
 
+.cl-internal-b3fm6y {
+  display: none;
+}
+.cl-internal-1b63r8w {
+  color: #cccccc;
+}
+
+.cl-internal-fu73ob:hover {
+  text-decoration: none;
+}
+
+.cl-internal-fqx4fd {
+  color: #cccccc;
+}
+
+.cl-internal-f7yy9s {
+  color: #cccccc;
+  background-color: #4d4d4d;
+}
+
+.cl-internal-f7yy9s:hover {
+  background-color: #4d4d4d;
+  opacity: 80%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
