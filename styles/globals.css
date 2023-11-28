@@ -9,6 +9,68 @@ body,
   background-attachment: fixed;
 }
 
+/* .cl-card p.cl-formFieldErrorText {
+  color: hsl(var(--destructive));
+}
+
+.cl-card p {
+  color: hsl(var(--secondary));
+}
+
+.dark .cl-card p {
+  color: hsl(var(--primary));
+}
+
+.cl-card h1 {
+  color: hsl(var(--primary-foreground));
+  font-weight: bold;
+  text-align: center;
+}
+
+.dark .cl-card h1 {
+  color: hsl(var(--secondary-foreground));
+  font-weight: bold;
+  text-align: center;
+}
+
+.cl-card a {
+  color: hsl(var(--primary-foreground));
+}
+
+.dark .cl-card a {
+  color: hsl(var(--secondary-foreground));
+}
+
+.cl-card a:hover {
+  color: hsl(var(--secondary));
+}
+
+.dark .cl-card a:hover {
+  color: hsl(var(--primary));
+}
+
+.cl-card button {
+  background-color: #cccccc;
+  color: #00001a;
+}
+
+.cl-card button span {
+  color: #00001a;
+}
+
+.cl-card button:hover {
+  background-color: #cccccc;
+  opacity: 80%;
+}
+
+.cl-card span {
+  color: #cccccc;
+}
+
+.cl-card button svg {
+  color: #00001a;
+} */
+
 .cl-internal-b3fm6y {
   display: none;
 }
@@ -32,6 +94,10 @@ body,
 .cl-internal-f7yy9s:hover {
   background-color: #4d4d4d;
   opacity: 80%;
+}
+
+.cl-internal-wkkub3 {
+  color: #cccccc;
 }
 
 @layer base {

@@ -26,40 +26,64 @@ export default function RootLayout({
       appearance={{
         elements: {
           rootBox: 'w-full sm:w-auto flex justify-center',
-          card: 'bg-slate-900 rounded-md',
-          headerTitle: 'font-bold text-center text-secondary dark:text-primary',
-          headerSubtitle: 'text-secondary dark:text-primary',
+          card: 'bg-slate-900 rounded-md mb-0',
+          headerTitle:
+            'text-center text-primary-foreground dark:text-secondary-foreground',
+          headerSubtitle: 'text-center text-secondary dark:text-primary',
           socialButtonsBlockButton:
-            'text-primary bg-secondary hover:bg-secondary-foreground dark:text-secondary dark:bg-primary dark:hover:bg-primary-foreground',
+            'bg-secondary dark:bg-primary hover:bg-secondary-foreground dark:hover:bg-primary-foreground',
+          footerActionText: 'text-secondary dark:text-primary',
+          footerActionLink:
+            'text-primary-foreground hover:text-secondary-foreground dark:secondary-foreground dark:hover:text-primary-foreground',
           dividerText: 'text-secondary dark:text-primary',
           dividerLine: 'bg-secondary dark:bg-primary',
           formFieldLabel: 'text-secondary dark:text-primary',
           formFieldHintText: 'hidden',
           formButtonPrimary:
             'text-primary bg-secondary hover:bg-secondary-foreground dark:bg-primary dark:text-secondary dark:hover:bg-primary-foreground',
-          footerActionText: 'text-secondary dark:text-primary',
           formFieldInfoText: 'text-secondary dark:text-primary',
           formFieldSuccessText: 'text-secondary dark:text-primary',
           formFieldRow: 'flex-row-reverse',
-          identityPreview:
-            'text-primary bg-secondary dark:bg-primary dark:text-secondary',
+          identityPreview: ' bg-secondary dark:bg-primary ',
+          identityPreviewText: 'text-primary dark:text-secondary',
           identityPreviewEditButtonIcon: 'text-primary dark:text-secondary',
           formHeaderTitle: 'text-secondary dark:text-primary',
           formHeaderSubtitle: 'text-secondary dark:text-primary',
           otpCodeFieldInput:
             'border-secondary focus:border-secondary-foreground dark:border-primary focus:border-primary-foreground text-secondary dark:text-primary',
-          formResendCodeLink: 'text-secondary dark:text-primary',
           alertText__danger: 'text-destructive',
-          footerActionLink:
-            'text-primary-foreground hover:text-secondary dark:text-secondary-foreground dark:hover:text-primary',
           formFieldAction__password:
             'text-secondary hover:text-secondary-foreground dark:text-primary dark:hover:text-primary-foreground',
+          formFieldInputShowPasswordIcon: 'text-primary dark:text-secondary',
+          formFieldErrorText: 'text-destructive',
           alternativeMethodsBlockButton:
             'bg-secondary-foreground text-secondary hover:bg-secondary-foreground hover:opacity-80 dark:bg-[#4d4d4d] dark:text-primary hover:bg-[#4d4d4d] hover:opacity-80',
+          alternativeMethodsBlockButtonArrow:
+            'text-primary dark:text-secondary',
           headerBackLink:
             'text-primary-foreground hover:text-secondary dark:text-secondary-foreground dark:hover:text-primary border-secondary',
           headerBackIcon:
             'text-primary-foreground hover:text-secondary dark:text-secondary-foreground dark:hover:text-primary',
+          userPreviewMainIdentifier: 'text-secondary dark:text-primary',
+          userPreviewSecondaryIdentifier: 'text-secondary dark:text-primary',
+          userButtonPopoverActionButton:
+            'bg-secondary hover:bg-secondary-foreground dark:bg-primary dark:hover:bg-primary-foreground',
+          userButtonPopoverActionButtonText: 'text-primary dark:text-secondary',
+          userButtonPopoverActionButtonIcon: 'text-primary dark:text-secondary',
+          userButtonPopoverFooter: 'text-primary dark:text-secondary',
+          formResendCodeLink:
+            'text-primary-foreground hover:text-secondary-foreground dark:secondary-foreground dark:hover:text-primary-foreground',
+          navbarMobileMenuButton:
+            'text-secondary hover:text-secondary-foreground dark:text-primary dark:hover:text-primary-foreground',
+          modalCloseButton:
+            'text-primary-foreground dark:text-secondary-foreground',
+          profileSectionTitleText:
+            'text-primary-foreground dark:text-secondary-foreground',
+          accordionTriggerButton:
+            'bg-secondary hover:bg-secondary-foreground dark:bg-primary dark:hover:bg-primary-foreground',
+          badge: 'text-primary dark:text-secondary',
+          profileSectionPrimaryButton:
+            'bg-secondary-foreground hover:bg-secondary-foreground hover:opacity-80 dark:bg-primary-foreground dark:hover:bg-primary-foreground dark:hover:opacity-80 text-primary-foreground dark:text-secondary-foreground',
         },
       }}>
       <html
