@@ -84,6 +84,28 @@ export default function RootLayout({
           badge: 'text-primary dark:text-secondary',
           profileSectionPrimaryButton:
             'bg-secondary-foreground hover:bg-secondary-foreground hover:opacity-80 dark:bg-primary-foreground dark:hover:bg-primary-foreground dark:hover:opacity-80 text-primary-foreground dark:text-secondary-foreground',
+          navbarButton:
+            'bg-secondary-foreground hover:bg-secondary-foreground hover:opacity-80 dark:bg-primary-foreground dark:hover:bg-primary-foreground dark:hover:opacity-80 text-primary-foreground dark:text-secondary-foreground mb-3',
+          navbar: 'bg-primary dark:bg-secondary',
+          '3vf5mz': 'text-secondary',
+          breadcrumbsItem:
+            'text-primary-foreground hover:text-secondary dark:text-secondary-foreground dark:hover:text-primary border-secondary',
+          breadcrumbsItem__currentPage:
+            'hover:text-primary-foreground dark:hover:text-secondary-foreground',
+          breadcrumbsItemDivider:
+            'text-primary-foreground dark:text-secondary-foreground',
+          formButtonReset:
+            'bg-secondary-foreground text-primary-foreground hover:bg-secondary hover:text-secondary-foreground dark:bg-primary-foreground dark:text-secondary-foreground dark:hover:bg-primary dark:hover:text-primary-foreground',
+          avatarImageActionsUpload:
+            'text-primary-foreground hover:text-secondary dark:text-secondary-foreground dark:hover:text-primary border-secondary',
+          fileDropAreaBox: 'bg-secondary dark:bg-primary',
+          fileDropAreaIcon: 'text-primary dark:text-secondary',
+          fileDropAreaHint:
+            'text-secondary-foreground dark:text-primary-foreground',
+          fileDropAreaButtonPrimary:
+            'bg-secondary text-primary hover:bg-secondary-foreground dark:text-secondary dark:bg-primary dark:hover:bg-primary-foreground',
+          fileDropAreaFooterHint:
+            'text-primary-foreground dark:text-secondary-foreground',
         },
       }}>
       <html

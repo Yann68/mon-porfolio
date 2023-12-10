@@ -1,6 +1,7 @@
 'use client';
 
 import LogoGithub from '@/public/logo-github.png';
+import { FaHeart } from 'react-icons/fa6';
 
 import {
   Card,
@@ -70,7 +71,7 @@ const CardProjects = ({
             className={cn(
               'w-full flex items-center mt-3 pb-0',
               !link ? 'flex justify-end mt-4 md:mt-3' : 'flex justify-between',
-              !githubLink && ' md:mt-4'
+              !githubLink && ' md:mt-4 md:mb-2'
             )}>
             {link && (
               <Button
@@ -105,6 +106,16 @@ const CardProjects = ({
                 </p>
               </Link>
             )}
+          </div>
+          <div className="mt-2 w-full flex justify-start items-center">
+            <div
+              className={cn(
+                'cursor-pointer text-2xl text-secondary-foreground dark:text-primary-foreground'
+              )}>
+              <FaHeart />
+            </div>
+
+            <p className="ml-3">j&apos;aimes</p>
           </div>
         </CardFooter>
       </Card>

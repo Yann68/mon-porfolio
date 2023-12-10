@@ -14,13 +14,7 @@ const Footer = () => {
   return (
     <div
       className={cn(
-        'w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary dark:bg-secondary p-5 pt-2',
-        pathname === '/sign-in' ||
-          pathname === '/sign-up' ||
-          pathname === '/sign-in/factor-one' ||
-          pathname === '/sign-up/verify-email-address'
-          ? 'hidden'
-          : ''
+        'w-full flex flex-col-reverse sm:flex-row sm:justify-around items-center border-t border-slate-950 dark:border-white bg-primary dark:bg-secondary p-5 pt-2'
       )}>
       <nav className="mt-3 sm:md-0">
         <ul

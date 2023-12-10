@@ -56,7 +56,7 @@ const Skills = () => {
               <li>MongoDb</li>
               <li>Express.js</li>
               <li>Vercel</li>
-              <li>Formfree</li>
+              <li>Next.js</li>
             </ul>
           </div>
           <div className="mb-3">

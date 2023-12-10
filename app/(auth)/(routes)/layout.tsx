@@ -4,6 +4,8 @@ export default function layoutAuth({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-[100vh] flex justify-center items-center">{children}</div>
+    <div className="min-h-[100vh] flex justify-center items-center">
+      <div className="h-full mt-14 mb-4">{children}</div>
+    </div>
   );
 }

@@ -9,6 +9,40 @@ body,
   background-attachment: fixed;
 }
 
+.cl-internal-3vf5mz,
+.cl-internal-b4xm84 {
+  color: hsl(var(--primary-foreground));
+}
+
+.dark .cl-internal-3vf5mz,
+.cl-internal-b4xm84 {
+  color: hsl(var(--secondary-foreground));
+}
+
+p.cl-internal-fqx4fd {
+  color: hsl(var(--primary));
+}
+
+.cl-accordionContent .cl-internal-fqx4fd {
+  color: hsl(var(--secondary-foreground));
+}
+
+.cl-profileSectionContent__danger .cl-internal-fqx4fd {
+  color: hsl(var(--secondary-foreground));
+}
+
+.dark .cl-internal-fqx4fd {
+  color: hsl(var(--secondary));
+}
+
+.dark .cl-accordionContent .cl-internal-fqx4fd {
+  color: hsl(var(--primary-foreground));
+}
+
+.dark .cl-profileSectionContent__danger .cl-internal-fqx4fd {
+  color: hsl(var(--primary-foreground));
+}
+
 /* .cl-card p.cl-formFieldErrorText {
   color: hsl(var(--destructive));
 }
